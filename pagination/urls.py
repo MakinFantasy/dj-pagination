@@ -15,7 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from pagi.views import create_car, car_list, create_person, list_person
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('car/', create_car),
+    path('cars/', car_list),
+    path('person', create_person),
+    path('people/', list_person),
 ]
